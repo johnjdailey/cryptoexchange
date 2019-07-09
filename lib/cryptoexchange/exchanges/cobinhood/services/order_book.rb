@@ -15,7 +15,7 @@ module Cryptoexchange::Exchanges
 
         def ticker_url(market_pair)
           trading_pair_id = "#{market_pair.base}-#{market_pair.target}"
-          "#{Cryptoexchange::Exchanges::Cobinhood::Market::API_URL}/market/orderbooks/#{trading_pair_id}"
+          "#{Cryptoexchange::Exchanges::Cobinhood::Market::API_URL}/market/orderbooks/#{trading_pair_id}?limit=0"
         end
 
         def adapt(output, market_pair)
@@ -25,28 +25,19 @@ module Cryptoexchange::Exchanges
           order_book.market    = Cobinhood::Market::NAME
           order_book.asks      = adapt_orders output["result"]["orderbook"]['asks']
           order_book.bids      = adapt_orders output["result"]["orderbook"]['bids']
-          order_book.timestamp = DateTime.now.to_time.to_i
+          order_book.timestamp = nil
           order_book.payload   = output
           order_book
         end
 
         def adapt_orders(orders)
-          orders.collect do |price, amount, count|
+          orders.collect do |price, count, amount|
             Cryptoexchange::Models::Order.new \
               price: price,
               amount: amount,
-              timestamp: DateTime.now.to_time.to_i
+              timestamp: nil
           end
         end
-
-        private
-
-        def http_get(endpoint)
-          ctx = OpenSSL::SSL::SSLContext.new
-          ctx.verify_mode = OpenSSL::SSL::VERIFY_NONE
-          fetch_response = HTTP.timeout(:write => 2, :connect => 5, :read => 8).get(endpoint, ssl_context: ctx)
-        end
-
       end
     end
   end

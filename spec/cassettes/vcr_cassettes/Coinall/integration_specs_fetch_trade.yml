@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.coinall.com/api/spot/v3/products/BTC-USDT/trades?limit=100
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.coinall.com
+      User-Agent:
+      - http.rb/5.0.0.pre
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 May 2019 11:30:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d615415f706afd5a111e84daed3a318f21557919837; expires=Thu, 14-May-20
+        11:30:37 GMT; path=/; domain=.coinall.com; HttpOnly
+      - locale=en_US; Max-Age=604800; Expires=Wed, 22-May-2019 11:30:37 GMT; Path=/
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Ok-Before:
+      - '1482141249'
+      Ok-After:
+      - '1482140723'
+      Ok-From:
+      - '1482140723'
+      Ok-To:
+      - '1482141249'
+      Ok-Limit:
+      - '100'
+      X-Kong-Upstream-Latency:
+      - '9'
+      X-Kong-Proxy-Latency:
+      - '0'
+      Via:
+      - kong/0.12.3
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4d74c7e74e89ce27-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"time":"2019-05-15T11:30:34.733Z","timestamp":"2019-05-15T11:30:34.733Z","trade_id":"1482141249","price":"7965.4","size":"3.333","side":"sell"},{"time":"2019-05-15T11:30:34.733Z","timestamp":"2019-05-15T11:30:34.733Z","trade_id":"1482141247","price":"7965.4","size":"3.9996","side":"sell"},{"time":"2019-05-15T11:30:28.476Z","timestamp":"2019-05-15T11:30:28.476Z","trade_id":"1482140725","price":"7969.2","size":"4.4408","side":"buy"},{"time":"2019-05-15T11:30:28.476Z","timestamp":"2019-05-15T11:30:28.476Z","trade_id":"1482140723","price":"7969.2","size":"2.7328","side":"buy"}]'
+    http_version: 
+  recorded_at: Wed, 15 May 2019 11:30:37 GMT
+recorded_with: VCR 4.0.0

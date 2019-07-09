@@ -23,8 +23,8 @@ RSpec.describe 'Exmo integration specs' do
     expect(ticker.bid).to be_a Numeric
     expect(ticker.ask).to be_a Numeric
     expect(ticker.volume).to be_a Numeric
-    expect(ticker.timestamp).to be_a Numeric
-    expect(2000..Date.today.year).to include(Time.at(ticker.timestamp).year)
+    expect(ticker.timestamp).to be nil
+    
     expect(ticker.payload).to_not be nil
   end
 
@@ -57,5 +57,10 @@ RSpec.describe 'Exmo integration specs' do
     expect(trade.timestamp).to be_a Numeric
     expect(trade.payload).to_not be nil
     expect(trade.market).to eq 'exmo'
+  end
+
+  it 'give trade url' do
+    trade_page_url = client.trade_page_url 'exmo', base: btc_usd_pair.base, target: btc_usd_pair.target
+    expect(trade_page_url).to eq "https://exmo.com/en/trade#?pair=BTC_USD"
   end
 end

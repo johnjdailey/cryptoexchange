@@ -2,7 +2,8 @@ require 'spec_helper'
 
 RSpec.describe 'BitZ integration specs' do
   let(:client) { Cryptoexchange::Client.new }
-  let(:eth_btc_pair) { Cryptoexchange::Models::MarketPair.new(base: 'eth', target: 'btc', market: 'bit_z') }
+  let(:market) { 'bit_z' }
+  let(:ltc_btc_pair) { Cryptoexchange::Models::MarketPair.new(base: 'ltc', target: 'btc', market: market) }
 
   it 'fetch pairs' do
     pairs = client.pairs('bit_z')
@@ -14,10 +15,15 @@ RSpec.describe 'BitZ integration specs' do
     expect(pair.market).to eq 'bit_z'
   end
 
-  it 'fetch ticker' do
-    ticker = client.ticker(eth_btc_pair)
+  it 'give trade url' do
+    trade_page_url = client.trade_page_url market, base: ltc_btc_pair.base, target: ltc_btc_pair.target
+    expect(trade_page_url).to eq "https://www.bit-z.com/exchange/ltc_btc"
+  end
 
-    expect(ticker.base).to eq 'ETH'
+  it 'fetch ticker' do
+    ticker = client.ticker(ltc_btc_pair)
+
+    expect(ticker.base).to eq 'LTC'
     expect(ticker.target).to eq 'BTC'
     expect(ticker.market).to eq 'bit_z'
     expect(ticker.last).to be_a Numeric
@@ -26,8 +32,7 @@ RSpec.describe 'BitZ integration specs' do
     expect(ticker.high).to be_a Numeric
     expect(ticker.low).to be_a Numeric
     expect(ticker.volume).to be_a Numeric
-    expect(ticker.timestamp).to be_a Numeric
-    expect(2000..Date.today.year).to include(Time.at(ticker.timestamp).year)
+    expect(ticker.timestamp).to be nil
     expect(ticker.payload).to_not be nil
   end
 end

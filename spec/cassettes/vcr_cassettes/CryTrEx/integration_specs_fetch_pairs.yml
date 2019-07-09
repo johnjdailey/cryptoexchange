@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://crytrex.com/public_api/pairs
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - crytrex.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Nov 2018 01:34:49 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/7.0.30
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Fri, 14 Dec 2018 01:34:49 GMT
+      Vary:
+      - Accept-Encoding,User-Agent
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/html; charset=UTF-8
+      Via:
+      - 1.1 stark
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\n\"success\":true,\n\"message\":\"\",\n\"result\":[\n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"CRYT\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"USDT\",\n
+        \  \"Currency\":\"BTC\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"LTC\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"DOGE\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"CPS\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"USDT\",\n
+        \  \"Currency\":\"CRYT\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"EURO\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"DGB\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"CMSH\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"ETH\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"BCN\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"XEM\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"ETH\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"XRP\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"CPS\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"DOGE\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"DOGE\",\n
+        \  \"Currency\":\"CPS\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"TRX\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"DGB\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"TPAY\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"EURO\",\n
+        \  \"Currency\":\"BTC\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"DOGE\",\n
+        \  \"Currency\":\"CRYT\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"USDT\",\n
+        \  \"Currency\":\"EURO\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"USDT\",\n
+        \  \"Currency\":\"DGB\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"DOGE\",\n
+        \  \"Currency\":\"DGB\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"EURO\",\n
+        \  \"Currency\":\"DGB\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"GDM\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"LTC\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"ACTIV\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"XLM\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"USDT\",\n
+        \  \"Currency\":\"XLM\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"XLM\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"BTC\",\n
+        \  \"Currency\":\"TBTC\",\n   \"IsActive\":true\n },\n \n {\n   \"Market\":\"CRYT\",\n
+        \  \"Currency\":\"TBTC\",\n   \"IsActive\":true\n },\n    {\n   \"Market\":\"XVG\",\n
+        \  \"Currency\":\"CRYT\",\n   \"IsActive\":true\n }\n  ]}"
+    http_version: 
+  recorded_at: Wed, 14 Nov 2018 01:34:49 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.bilaxy.com/v1/depth?merge=4&symbol=16
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.bilaxy.com
+      User-Agent:
+      - http.rb/5.0.0.pre
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Fri, 03 May 2019 07:59:14 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Fri, 03 May 2019 08:59:14 GMT
+      Location:
+      - https://api.bilaxy.com/v1/depth?symbol=16&merge=4
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4d10b1c5386f9cb7-AMS
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Fri, 03 May 2019 07:59:07 GMT
+- request:
+    method: get
+    uri: https://api.bilaxy.com/v1/depth?merge=4&symbol=16
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.0.0.pre
+      Host:
+      - api.bilaxy.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 03 May 2019 07:59:15 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d2ec16c28fd7e2298d740ae53fbe8deb01556870355; expires=Sat, 02-May-20
+        07:59:15 GMT; path=/; domain=.bilaxy.com; HttpOnly; Secure
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - default-src 'self'; object-src 'none'; img-src * data:; font-src * data:;
+        connect-src 'self' wss://www.bilaxy.com wss://bilaxy.com wss://m.bilaxy.com
+        wss://www.bilaxy.io wss://bilaxy.io wss://m.bilaxy.io https://discovery.amp.cloudflare.com
+        https://bilaxy.zendesk.com/ https://ekr.zdassets.com/; style-src 'self' 'unsafe-inline'
+        cdnjs.cloudflare.com amp.cloudflare.com; script-src 'self' 'unsafe-inline'
+        'unsafe-eval' ajax.cloudflare.com cdn.polyfill.io amp.cloudflare.com cdnjs.cloudflare.com
+        discovery.amp.cloudflare.com static.zdassets.com ekr.zdassets.com;
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4d10b1cc1afbbda5-AMS
+    body:
+      encoding: UTF-8
+      string: '{"code":"200","data":{"asks":[[0.0316,69.07062904,2.1826318776640004],[0.0317,10.0,0.317],[0.032,12.38677153,0.39637668896000006],[0.0347,17.1603146,0.5954629166200001],[0.0348,4.888285890000001,0.170112348972],[0.035,2.86009981,0.10010349335],[0.036,5.994,0.21578399999999998],[0.0366,0.40175688,0.014704301808],[0.037,6.0,0.22199999999999998],[0.0372223,2.03946012,0.07591339642467601],[0.0389,1.0,0.0389],[0.03896,0.79229736,0.0308679051456],[0.041,5.52959509,0.22671339869],[0.042333,9.05639648,0.38338443218784],[0.045,0.44566727,0.020055027149999998],[0.0487,0.36914062,0.017977148194],[0.049987,0.4921875,0.0246029765625],[0.05,0.65625,0.0328125],[0.057877,0.65625,0.03798178125],[0.06,0.875,0.0525],[0.06322,0.33425045,0.021131313449],[0.08,1.75,0.14],[0.08233,0.25068784,0.0206391298672],[0.09,0.11279297,0.0101513673],[0.09233,0.11279297,0.0104141749201],[0.09877665,0.11279297,0.0111413117201505],[0.1,1.75,0.17500000000000002]],"bids":[[0.0168112,100.0,1.68112],[0.0168,10.44345238,0.175449999984],[0.0161,35.375148440000004,0.5695398898840001],[0.01,6.0,0.06],[0.0093,2.82115994,0.026236787441999997],[0.008987,1.11573355,0.010027097413850002],[0.008745,2.0105606,0.017582352447],[0.00847,1.93999586,0.0164317649342],[0.0082111,3.0,0.024633300000000004],[0.007435,3.04637558,0.0226498024373],[0.0072,2.89966527,0.020877589943999998],[0.007,2.34054642,0.01638382494],[0.0067,5.41453412,0.036277378604],[0.0065544,5.41453412,0.035489022436128],[0.0062435,12.0,0.074922],[0.005987,8.964401200000001,0.0536698699844],[0.005465,2.55277264,0.0139509024776],[0.00532,11.21394595,0.059658192453999996],[0.005,12.4799475,0.0623997375],[0.004987,5.47659918,0.02731180011066],[0.004533,5.47659918,0.024825424082939997],[0.00342,5.47659918,0.0187299691956],[0.00322,5.47659918,0.0176346493596],[0.002334,5.47659918,0.01278238248612],[0.00221,5.47659918,0.0121032841878],[0.0018,7.97651944,0.014357734991999998],[0.00132,7.83609469,0.0103436449908],[0.00108,19.99027083,0.0215894924964],[0.001,160.099485,0.16009948499999999],[1.0E-8,10000.0,0.00010]]}}'
+    http_version: 
+  recorded_at: Fri, 03 May 2019 07:59:09 GMT
+recorded_with: VCR 4.0.0

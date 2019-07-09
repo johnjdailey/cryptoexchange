@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.cybex.io/lab/exchange/asset
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - app.cybex.io
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 14 Mar 2019 03:10:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '472'
+      Connection:
+      - close
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"1d8-qoirx+x1YMwhvCiqm+jvzSReO0E"
+    body:
+      encoding: UTF-8
+      string: '{"CYB":["JADE.INK","JADE.LHT","JADE.ENG","JADE.SNT","JADE.KNC","JADE.EOS","JADE.BAT","JADE.OMG","JADE.PAY","JADE.VEN","JADE.NAS","JADE.MT","JADE.TCT","JADE.DPY","JADE.GET","JADE.GNX","JADE.KEY","JADE.MAD","JADE.LTC"],"JADE.BTC":["CYB","JADE.LTC","JADE.LHT"],"JADE.ETH":["JADE.INK","CYB","JADE.LHT","JADE.MT","JADE.EOS","JADE.DPY","JADE.PPT","JADE.TCT","JADE.GNX","JADE.MVP","JADE.GNT","JADE.MKR","JADE.FUN"],"JADE.USDT":["CYB","JADE.ETH","JADE.BTC","JADE.EOS","JADE.LTC"]}'
+    http_version: 
+  recorded_at: Thu, 14 Mar 2019 03:10:37 GMT
+recorded_with: VCR 4.0.0

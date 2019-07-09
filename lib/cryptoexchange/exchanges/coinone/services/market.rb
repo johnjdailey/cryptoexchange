@@ -10,7 +10,7 @@ module Cryptoexchange::Exchanges
 
         def fetch(market_pair)
           output = super(ticker_url(market_pair))
-          adapt(output)
+          adapt(output, market_pair)
         end
 
         def ticker_url(market_pair)
@@ -18,16 +18,16 @@ module Cryptoexchange::Exchanges
           "#{Cryptoexchange::Exchanges::Coinone::Market::API_URL}/ticker?currency=#{base}"
         end
 
-        def adapt(output)
+        def adapt(output, market_pair)
           ticker           = Cryptoexchange::Models::Ticker.new
-          ticker.base      = output['currency']
-          ticker.target    = 'KRW'
-          ticker.market    = Coinone::Market::NAME
+          ticker.base      = market_pair.base
+          ticker.target    = market_pair.target
+          ticker.market    = market_pair.market
           ticker.last      = NumericHelper.to_d(output['last'])
           ticker.high      = NumericHelper.to_d(output['high'])
           ticker.low       = NumericHelper.to_d(output['low'])
           ticker.volume    = NumericHelper.to_d(output['volume'])
-          ticker.timestamp = output['timestamp'].to_i
+          ticker.timestamp = nil
           ticker.payload   = output
           ticker
         end

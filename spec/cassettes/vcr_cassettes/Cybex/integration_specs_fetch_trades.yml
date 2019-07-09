@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://hongkong.cybex.io/
+    body:
+      encoding: UTF-8
+      string: '{"jsonrpc":"2.0","method":"get_trade_history","params":["JADE.USDT","JADE.BTC","2019-03-14T03:10","2019-03-13T03:10",100],"id":1}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - hongkong.cybex.io
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 14 Mar 2019 03:10:38 GMT
+      Content-Length:
+      - '5995'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"jsonrpc":"2.0","result":[{"sequence":12435945,"date":"2019-03-14T02:23:33","price":"3874.06997590361445783","amount":"0.00119999","value":"4.648847","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435943,"date":"2019-03-14T01:39:33","price":"3866.89997969543147208","amount":"0.00111199","value":"4.299959","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435941,"date":"2019-03-14T01:22:27","price":"3872.329984","amount":"0.00103999","value":"4.027191","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435939,"date":"2019-03-14T00:30:24","price":"3870.61991636413767749","amount":"0.00103999","value":"4.025423","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435937,"date":"2019-03-14T00:30:21","price":"3870.61991636413767749","amount":"0.00103999","value":"4.025423","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435935,"date":"2019-03-13T23:31:42","price":"3870.02383949856695149","amount":"0.00111999","value":"4.334388","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435933,"date":"2019-03-13T23:31:39","price":"3870.02383949856695149","amount":"0.00111999","value":"4.334388","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435931,"date":"2019-03-13T23:31:21","price":"3870.12384039143206635","amount":"0.00111999","value":"4.334500","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435929,"date":"2019-03-13T23:29:27","price":"3869.29436869972053321","amount":"0.00111999","value":"4.333571","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435927,"date":"2019-03-13T23:29:15","price":"3869.06400950008482218","amount":"0.00111999","value":"4.333313","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435925,"date":"2019-03-13T23:28:48","price":"3868.53364762185376655","amount":"0.00111999","value":"4.332719","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435923,"date":"2019-03-13T21:46:54","price":"3858.72408838569025189","amount":"0.00103999","value":"4.013037","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435921,"date":"2019-03-13T21:25:33","price":"3864.28715660727506995","amount":"0.00103999","value":"4.018820","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435919,"date":"2019-03-13T18:52:36","price":"3866.09481667079796606","amount":"0.00111999","value":"4.329998","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435917,"date":"2019-03-13T18:52:33","price":"3866.09481667079796606","amount":"0.00111999","value":"4.329998","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435915,"date":"2019-03-13T18:39:33","price":"3867.84996763754045307","amount":"0.00119999","value":"4.641395","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435913,"date":"2019-03-13T16:06:00","price":"3870.60420182323056455","amount":"0.00111999","value":"4.335038","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435911,"date":"2019-03-13T15:29:12","price":"3858.49159651483748023","amount":"0.00119999","value":"4.630152","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435909,"date":"2019-03-13T14:02:15","price":"3881.42394128519004633","amount":"0.00111999","value":"4.347156","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435907,"date":"2019-03-13T12:51:27","price":"3861.84106166035699392","amount":"0.00122299","value":"4.722993","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435905,"date":"2019-03-13T12:26:03","price":"3853.04071749168002965","amount":"0.00124099","value":"4.781585","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435903,"date":"2019-03-13T11:51:21","price":"3856.77562059126943558","amount":"0.00107599","value":"4.149852","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435901,"date":"2019-03-13T11:51:18","price":"3856.7510023533046017","amount":"0.00107599","value":"4.149830","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435899,"date":"2019-03-13T11:21:06","price":"3851.5542140238820501","amount":"0.00103999","value":"4.005580","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435897,"date":"2019-03-13T11:20:00","price":"3850.62366628273466727","amount":"0.00111999","value":"4.312660","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435895,"date":"2019-03-13T11:03:39","price":"3857.04214201785014875","amount":"0.00119999","value":"4.628412","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435893,"date":"2019-03-13T10:53:00","price":"3847.549952","amount":"0.00119999","value":"4.617024","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435891,"date":"2019-03-13T10:52:57","price":"3847.55206293385778214","amount":"0.00119999","value":"4.617024","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435889,"date":"2019-03-13T06:14:00","price":"3881.04499588975510167","amount":"0.00110699","value":"4.296278","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435887,"date":"2019-03-13T04:56:54","price":"3877.96048889798889798","amount":"0.00111999","value":"4.343281","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435885,"date":"2019-03-13T04:56:51","price":"3877.96408896508004535","amount":"0.00111999","value":"4.343281","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"},{"sequence":12435883,"date":"2019-03-13T03:55:45","price":"3890.03263450196729838","amount":"0.00119199","value":"4.636880","side1_account_id":"1.2.46448","side2_account_id":"1.2.46448"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Mar 2019 03:10:38 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,196 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.coinex.com/v1/market/deals?market=ZRXETH
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.coinex.com
+      User-Agent:
+      - http.rb/5.0.0.pre
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 May 2019 08:52:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '12051'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d261faad73a6744cfe547f737b2700f0f1557391965; expires=Fri, 08-May-20
+        08:52:45 GMT; path=/; domain=.coinex.com; HttpOnly; Secure
+      Accept-Ranges:
+      - bytes
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4d42706abdad2cf1-KUL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code": 0, "data": [{"id": 721236973, "type": "sell", "price": "0.00153164",
+        "amount": "1", "date": 1557391910, "date_ms": 1557391910456}, {"id": 721236802,
+        "type": "sell", "price": "0.00153159", "amount": "1", "date": 1557391896,
+        "date_ms": 1557391896433}, {"id": 721236764, "type": "sell", "price": "0.00153157",
+        "amount": "1", "date": 1557391893, "date_ms": 1557391893504}, {"id": 721236530,
+        "type": "sell", "price": "0.00153125", "amount": "12.4463", "date": 1557391871,
+        "date_ms": 1557391871584}, {"id": 721236016, "type": "buy", "price": "0.0015306",
+        "amount": "10.7712", "date": 1557391824, "date_ms": 1557391824953}, {"id":
+        721235642, "type": "sell", "price": "0.00153089", "amount": "9.1185", "date":
+        1557391789, "date_ms": 1557391789437}, {"id": 721235555, "type": "sell", "price":
+        "0.00153137", "amount": "7.3443", "date": 1557391780, "date_ms": 1557391780579},
+        {"id": 721235503, "type": "buy", "price": "0.00153161", "amount": "10.7194",
+        "date": 1557391776, "date_ms": 1557391776625}, {"id": 721234844, "type": "buy",
+        "price": "0.00153089", "amount": "12.8753", "date": 1557391720, "date_ms":
+        1557391720392}, {"id": 721234783, "type": "sell", "price": "0.00153076", "amount":
+        "11.6559", "date": 1557391715, "date_ms": 1557391715026}, {"id": 721234473,
+        "type": "buy", "price": "0.00153208", "amount": "1", "date": 1557391689, "date_ms":
+        1557391689943}, {"id": 721234336, "type": "buy", "price": "0.00152971", "amount":
+        "1", "date": 1557391677, "date_ms": 1557391677487}, {"id": 721233913, "type":
+        "buy", "price": "0.00152973", "amount": "1", "date": 1557391641, "date_ms":
+        1557391641052}, {"id": 721233656, "type": "buy", "price": "0.00153554", "amount":
+        "10.3352", "date": 1557391621, "date_ms": 1557391621472}, {"id": 721233573,
+        "type": "sell", "price": "0.00153539", "amount": "7.4551", "date": 1557391615,
+        "date_ms": 1557391615011}, {"id": 721233450, "type": "buy", "price": "0.00153561",
+        "amount": "11.275", "date": 1557391604, "date_ms": 1557391604992}, {"id":
+        721232732, "type": "buy", "price": "0.00153435", "amount": "1", "date": 1557391544,
+        "date_ms": 1557391544434}, {"id": 721232721, "type": "buy", "price": "0.00153453",
+        "amount": "1", "date": 1557391543, "date_ms": 1557391543017}, {"id": 721232693,
+        "type": "sell", "price": "0.00153722", "amount": "1", "date": 1557391539,
+        "date_ms": 1557391539972}, {"id": 721232412, "type": "sell", "price": "0.00153434",
+        "amount": "1", "date": 1557391514, "date_ms": 1557391514432}, {"id": 721232355,
+        "type": "buy", "price": "0.00153164", "amount": "1", "date": 1557391509, "date_ms":
+        1557391509548}, {"id": 721232134, "type": "sell", "price": "0.0015358", "amount":
+        "11.1394", "date": 1557391488, "date_ms": 1557391488070}, {"id": 721231809,
+        "type": "sell", "price": "0.00153537", "amount": "11.3431", "date": 1557391456,
+        "date_ms": 1557391456592}, {"id": 721231693, "type": "buy", "price": "0.00153447",
+        "amount": "11.8239", "date": 1557391446, "date_ms": 1557391446970}, {"id":
+        721231594, "type": "sell", "price": "0.00153836", "amount": "1", "date": 1557391437,
+        "date_ms": 1557391437516}, {"id": 721231513, "type": "sell", "price": "0.00153644",
+        "amount": "1", "date": 1557391429, "date_ms": 1557391429902}, {"id": 721231477,
+        "type": "buy", "price": "0.00153435", "amount": "1", "date": 1557391426, "date_ms":
+        1557391426916}, {"id": 721231308, "type": "sell", "price": "0.00153682", "amount":
+        "1", "date": 1557391410, "date_ms": 1557391410524}, {"id": 721231237, "type":
+        "sell", "price": "0.00153435", "amount": "1", "date": 1557391404, "date_ms":
+        1557391404561}, {"id": 721230951, "type": "sell", "price": "0.0015359", "amount":
+        "7.2232", "date": 1557391378, "date_ms": 1557391378525}, {"id": 721230437,
+        "type": "buy", "price": "0.00153577", "amount": "9.2014", "date": 1557391332,
+        "date_ms": 1557391332368}, {"id": 721230369, "type": "sell", "price": "0.00153575",
+        "amount": "8.7942", "date": 1557391326, "date_ms": 1557391326522}, {"id":
+        721230049, "type": "buy", "price": "0.00153524", "amount": "1", "date": 1557391298,
+        "date_ms": 1557391298982}, {"id": 721229765, "type": "buy", "price": "0.00153429",
+        "amount": "1", "date": 1557391274, "date_ms": 1557391274028}, {"id": 721229757,
+        "type": "sell", "price": "0.00153429", "amount": "1", "date": 1557391273,
+        "date_ms": 1557391273477}, {"id": 721229720, "type": "buy", "price": "0.00153229",
+        "amount": "1", "date": 1557391270, "date_ms": 1557391270903}, {"id": 721229326,
+        "type": "sell", "price": "0.00153423", "amount": "9.3163", "date": 1557391236,
+        "date_ms": 1557391236952}, {"id": 721229168, "type": "buy", "price": "0.00153424",
+        "amount": "9.2771", "date": 1557391221, "date_ms": 1557391221435}, {"id":
+        721228438, "type": "sell", "price": "0.00153779", "amount": "1", "date": 1557391164,
+        "date_ms": 1557391164099}, {"id": 721228412, "type": "buy", "price": "0.00153451",
+        "amount": "1", "date": 1557391162, "date_ms": 1557391162943}, {"id": 721228260,
+        "type": "sell", "price": "0.00153426", "amount": "1", "date": 1557391149,
+        "date_ms": 1557391149506}, {"id": 721228164, "type": "buy", "price": "0.00153039",
+        "amount": "1", "date": 1557391142, "date_ms": 1557391142932}, {"id": 721227993,
+        "type": "sell", "price": "0.00153527", "amount": "8.9016", "date": 1557391126,
+        "date_ms": 1557391126461}, {"id": 721227868, "type": "buy", "price": "0.00153529",
+        "amount": "9.0168", "date": 1557391115, "date_ms": 1557391115968}, {"id":
+        721226885, "type": "buy", "price": "0.00153533", "amount": "11.5431", "date":
+        1557391037, "date_ms": 1557391037491}, {"id": 721226771, "type": "sell", "price":
+        "0.00153508", "amount": "10.2359", "date": 1557391027, "date_ms": 1557391027902},
+        {"id": 721226647, "type": "sell", "price": "0.001535", "amount": "10.7952",
+        "date": 1557391016, "date_ms": 1557391016938}, {"id": 721226272, "type": "buy",
+        "price": "0.00153923", "amount": "1", "date": 1557390983, "date_ms": 1557390983915},
+        {"id": 721225909, "type": "buy", "price": "0.00153472", "amount": "1", "date":
+        1557390952, "date_ms": 1557390952498}, {"id": 721225877, "type": "buy", "price":
+        "0.00153472", "amount": "1", "date": 1557390949, "date_ms": 1557390949583},
+        {"id": 721225587, "type": "buy", "price": "0.00153393", "amount": "11.8541",
+        "date": 1557390924, "date_ms": 1557390924016}, {"id": 721225293, "type": "sell",
+        "price": "0.00153392", "amount": "10.916", "date": 1557390899, "date_ms":
+        1557390899939}, {"id": 721224971, "type": "buy", "price": "0.00153689", "amount":
+        "1", "date": 1557390870, "date_ms": 1557390870965}, {"id": 721224770, "type":
+        "buy", "price": "0.00153117", "amount": "1", "date": 1557390853, "date_ms":
+        1557390853545}, {"id": 721224519, "type": "sell", "price": "0.0015349", "amount":
+        "1", "date": 1557390830, "date_ms": 1557390830994}, {"id": 721224321, "type":
+        "buy", "price": "0.00153983", "amount": "1", "date": 1557390815, "date_ms":
+        1557390815554}, {"id": 721224028, "type": "sell", "price": "0.00153691", "amount":
+        "1", "date": 1557390792, "date_ms": 1557390792492}, {"id": 721223874, "type":
+        "sell", "price": "0.00153116", "amount": "1", "date": 1557390780, "date_ms":
+        1557390780508}, {"id": 721223545, "type": "buy", "price": "0.00153998", "amount":
+        "1", "date": 1557390754, "date_ms": 1557390754033}, {"id": 721223335, "type":
+        "buy", "price": "0.00153489", "amount": "1", "date": 1557390736, "date_ms":
+        1557390736067}, {"id": 721222974, "type": "sell", "price": "0.00153454", "amount":
+        "1", "date": 1557390701, "date_ms": 1557390701931}, {"id": 721222799, "type":
+        "buy", "price": "0.001535", "amount": "1", "date": 1557390683, "date_ms":
+        1557390683426}, {"id": 721222447, "type": "buy", "price": "0.00153393", "amount":
+        "1", "date": 1557390650, "date_ms": 1557390650957}, {"id": 721222434, "type":
+        "buy", "price": "0.00153163", "amount": "1", "date": 1557390650, "date_ms":
+        1557390650109}, {"id": 721222044, "type": "buy", "price": "0.00153623", "amount":
+        "1", "date": 1557390614, "date_ms": 1557390614013}, {"id": 721222014, "type":
+        "buy", "price": "0.00153517", "amount": "1", "date": 1557390611, "date_ms":
+        1557390611394}, {"id": 721221997, "type": "buy", "price": "0.00153334", "amount":
+        "1", "date": 1557390609, "date_ms": 1557390609576}, {"id": 721221247, "type":
+        "buy", "price": "0.00153749", "amount": "11.2016", "date": 1557390546, "date_ms":
+        1557390546454}, {"id": 721220924, "type": "buy", "price": "0.00153681", "amount":
+        "12.6219", "date": 1557390516, "date_ms": 1557390516596}, {"id": 721220869,
+        "type": "buy", "price": "0.00153764", "amount": "1", "date": 1557390511, "date_ms":
+        1557390511877}, {"id": 721220676, "type": "buy", "price": "0.00153596", "amount":
+        "1", "date": 1557390493, "date_ms": 1557390493568}, {"id": 721220390, "type":
+        "buy", "price": "0.00153215", "amount": "1", "date": 1557390468, "date_ms":
+        1557390468536}, {"id": 721220003, "type": "buy", "price": "0.00153596", "amount":
+        "1", "date": 1557390435, "date_ms": 1557390435942}, {"id": 721219940, "type":
+        "sell", "price": "0.00153621", "amount": "1", "date": 1557390430, "date_ms":
+        1557390430915}, {"id": 721219765, "type": "sell", "price": "0.00153758", "amount":
+        "1", "date": 1557390414, "date_ms": 1557390414457}, {"id": 721219756, "type":
+        "sell", "price": "0.00153621", "amount": "1", "date": 1557390413, "date_ms":
+        1557390413572}, {"id": 721219746, "type": "buy", "price": "0.00153281", "amount":
+        "1", "date": 1557390412, "date_ms": 1557390412503}, {"id": 721219704, "type":
+        "sell", "price": "0.00153025", "amount": "1", "date": 1557390408, "date_ms":
+        1557390408529}, {"id": 721219534, "type": "sell", "price": "0.00153051", "amount":
+        "1", "date": 1557390392, "date_ms": 1557390392427}, {"id": 721219284, "type":
+        "buy", "price": "0.00153621", "amount": "1", "date": 1557390369, "date_ms":
+        1557390369934}, {"id": 721219117, "type": "sell", "price": "0.00154162", "amount":
+        "1", "date": 1557390354, "date_ms": 1557390354935}, {"id": 721219104, "type":
+        "sell", "price": "0.00153621", "amount": "1", "date": 1557390353, "date_ms":
+        1557390353564}, {"id": 721218702, "type": "sell", "price": "0.00153743", "amount":
+        "7.231", "date": 1557390319, "date_ms": 1557390319932}, {"id": 721218449,
+        "type": "sell", "price": "0.00153664", "amount": "10.6035", "date": 1557390296,
+        "date_ms": 1557390296881}, {"id": 721218196, "type": "sell", "price": "0.0015367",
+        "amount": "8.9135", "date": 1557390274, "date_ms": 1557390274000}, {"id":
+        721217961, "type": "buy", "price": "0.00153835", "amount": "10.0415", "date":
+        1557390254, "date_ms": 1557390254551}, {"id": 721217652, "type": "sell", "price":
+        "0.00153786", "amount": "9.8612", "date": 1557390224, "date_ms": 1557390224958},
+        {"id": 721217258, "type": "buy", "price": "0.00153675", "amount": "1", "date":
+        1557390192, "date_ms": 1557390192518}, {"id": 721217081, "type": "buy", "price":
+        "0.00153675", "amount": "1", "date": 1557390179, "date_ms": 1557390179048},
+        {"id": 721217011, "type": "sell", "price": "0.00154035", "amount": "1", "date":
+        1557390172, "date_ms": 1557390172553}, {"id": 721216825, "type": "buy", "price":
+        "0.00153655", "amount": "1", "date": 1557390156, "date_ms": 1557390156080},
+        {"id": 721216502, "type": "sell", "price": "0.0015406", "amount": "1", "date":
+        1557390129, "date_ms": 1557390129095}, {"id": 721216265, "type": "sell", "price":
+        "0.00153684", "amount": "1", "date": 1557390107, "date_ms": 1557390107599},
+        {"id": 721216061, "type": "sell", "price": "0.00153684", "amount": "1", "date":
+        1557390089, "date_ms": 1557390089362}, {"id": 721215898, "type": "buy", "price":
+        "0.00153691", "amount": "1", "date": 1557390075, "date_ms": 1557390075947},
+        {"id": 721215810, "type": "buy", "price": "0.00153691", "amount": "1", "date":
+        1557390067, "date_ms": 1557390067497}, {"id": 721215757, "type": "sell", "price":
+        "0.00153691", "amount": "1", "date": 1557390063, "date_ms": 1557390063009},
+        {"id": 721215632, "type": "buy", "price": "0.00153691", "amount": "1", "date":
+        1557390051, "date_ms": 1557390051936}, {"id": 721215524, "type": "sell", "price":
+        "0.00153691", "amount": "1", "date": 1557390040, "date_ms": 1557390040044},
+        {"id": 721215406, "type": "buy", "price": "0.00154265", "amount": "1", "date":
+        1557390028, "date_ms": 1557390028950}], "message": "OK"}'
+    http_version: 
+  recorded_at: Thu, 09 May 2019 08:52:45 GMT
+recorded_with: VCR 4.0.0

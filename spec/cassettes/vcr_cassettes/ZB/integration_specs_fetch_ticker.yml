@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.zb.cn/data/v1/ticker?market=btc_usdt
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.zb.cn
+      User-Agent:
+      - http.rb/5.0.0.pre
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 May 2019 06:15:36 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '135'
+      Connection:
+      - close
+      Cndserver:
+      - cache_server_1
+    body:
+      encoding: UTF-8
+      string: '{"date":"1557987335798","ticker":{"high":"8320.0","vol":"26248.0054","last":"8036.39","low":"7836.9","buy":"8038.28","sell":"8040.91"}}'
+    http_version: 
+  recorded_at: Thu, 16 May 2019 06:15:36 GMT
+recorded_with: VCR 4.0.0

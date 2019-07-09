@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://crytrex.com/public_api/stats?currency=ETH&market=BTC
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - crytrex.com
+      User-Agent:
+      - http.rb/3.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Nov 2018 01:34:51 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/7.0.30
+      Cache-Control:
+      - max-age=2592000
+      Expires:
+      - Fri, 14 Dec 2018 01:34:51 GMT
+      Vary:
+      - Accept-Encoding,User-Agent
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/html; charset=UTF-8
+      Via:
+      - 1.1 stark
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"stats":{"market":"BTC","bid":0.03310000,"ask":0.03310000,"last_price":0.03310000,"last_transaction_type":"BUY","last_transaction_currency":"ETH","daily_change":0.00024000,"daily_change_percent":0.72507552870091,"max":0.03310000,"min":0.03286000,"open":0.03310000,"market_cap":0,"global_units":0,"global_volume":0,"24h_volume":0.14577500,"24h_volume_buy":0.14577500,"24h_volume_sell":0.14577500,"1h_volume":0.14577500,"1h_volume_buy":0.14577500,"1h_volume_sell":0.14577500,"currency":"ETH"}}'
+    http_version: 
+  recorded_at: Wed, 14 Nov 2018 01:34:51 GMT
+recorded_with: VCR 4.0.0

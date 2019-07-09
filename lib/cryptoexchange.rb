@@ -1,13 +1,18 @@
 require "cryptoexchange/version"
+require "cryptoexchange/credentials"
 require "cryptoexchange/client"
-require "cryptoexchange/lru_ttl_cache"
 require "cryptoexchange/helpers/string_helper"
 require "cryptoexchange/helpers/numeric_helper"
 require "cryptoexchange/helpers/hash_helper"
 require "cryptoexchange/models/ticker"
 require "cryptoexchange/models/market_pair"
+require "cryptoexchange/models/market"
 require "cryptoexchange/services/market"
 require "cryptoexchange/services/pairs"
+require "cryptoexchange/services/market_stream"
+require "cryptoexchange/services/trade_stream"
+require "cryptoexchange/services/order_book_stream"
+require "cryptoexchange/services/authentication"
 
 path_files = Dir[File.join(File.dirname(__dir__), 'lib', 'cryptoexchange', '**', '*.rb')]
 
@@ -17,3 +22,9 @@ end
 
 require "http"
 require "lru_redux"
+require "websocket-eventmachine-client"
+require "cryptoexchange/config"
+require "cryptoexchange/lru_ttl_cache"
+require "cryptoexchange/cache"
+
+Cryptoexchange.reset_config

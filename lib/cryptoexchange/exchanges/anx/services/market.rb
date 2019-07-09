@@ -10,20 +10,17 @@ module Cryptoexchange::Exchanges
 
         def fetch(market_pair)
           output = super(ticker_url(market_pair))
-          adapt(output)
+          adapt(output, market_pair)
         end
 
         def ticker_url(market_pair)
           "#{Cryptoexchange::Exchanges::Anx::Market::API_URL}/#{market_pair.base}#{market_pair.target}/money/ticker"
         end
 
-        def adapt(output)
+        def adapt(output, market_pair)
           ticker = Cryptoexchange::Models::Ticker.new
-          base = output['data']['vol']['currency']
-          target = output['data']['high']['currency']
-
-          ticker.base      = base
-          ticker.target    = target
+          ticker.base      = market_pair.base
+          ticker.target    = market_pair.target
           ticker.market    = Anx::Market::NAME
           ticker.ask       = NumericHelper.to_d(output['data']['sell']['value'])
           ticker.bid       = NumericHelper.to_d(output['data']['buy']['value'])
@@ -31,7 +28,7 @@ module Cryptoexchange::Exchanges
           ticker.high      = NumericHelper.to_d(output['data']['high']['value'])
           ticker.low       = NumericHelper.to_d(output['data']['low']['value'])
           ticker.volume    = NumericHelper.to_d(output['data']['vol']['value'])
-          ticker.timestamp = output['data']['dataUpdateTime'].to_i / 1000000
+          ticker.timestamp = nil
           ticker.payload   = output
           ticker
         end

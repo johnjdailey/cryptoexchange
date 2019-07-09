@@ -20,6 +20,7 @@ module Cryptoexchange::Exchanges
         end
 
         def adapt(output)
+          handle_invalid(output)
           data = output['Data']
           base, target = data['Label'].split('/')
 
@@ -34,9 +35,15 @@ module Cryptoexchange::Exchanges
           ticker.low       = NumericHelper.to_d(data['Low'])
           ticker.volume    = NumericHelper.to_d(data['Volume'])
           ticker.change    = NumericHelper.to_d(data['Change'])
-          ticker.timestamp = Time.now.to_i
+          ticker.timestamp = nil
           ticker.payload   = data
           ticker
+        end
+
+        def handle_invalid(output)
+          if !output['Error'].nil?
+            raise Cryptoexchange::ResultParseError, { response: output }
+          end
         end
       end
     end

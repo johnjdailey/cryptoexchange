@@ -14,6 +14,11 @@ RSpec.describe 'Gate integration specs' do
     expect(pair.market).to eq 'gate'
   end
 
+  it 'give trade url' do
+    trade_page_url = client.trade_page_url 'gate', base: bch_usdt_pair.base, target: bch_usdt_pair.target
+    expect(trade_page_url).to eq "https://gate.io/trade/BCH_USDT"
+  end
+
   it 'fetch ticker' do
     ticker = client.ticker(bch_usdt_pair)
 
@@ -26,7 +31,7 @@ RSpec.describe 'Gate integration specs' do
     expect(ticker.high).to be_a Numeric
     expect(ticker.low).to be_a Numeric
     expect(ticker.volume).to be_a Numeric
-    expect(2000..Date.today.year).to include(Time.at(ticker.timestamp).year)
+    expect(ticker.timestamp).to be nil
     expect(ticker.payload).to_not be nil
   end
 

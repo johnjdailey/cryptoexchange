@@ -14,19 +14,25 @@ module Cryptoexchange::Exchanges
         end
 
         def ticker_url
-          "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/tickers"
+          "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/funds/tickers"
         end
 
         def adapt_all(output)
-          output['result']['tickers'].map do |pair, ticker|
-            base, target = pair[0,3], pair[3,6]
+          pairs = output['tickers'].map do |pair|
+            separator = /(BTC|LTC|EUR|PPC|ETH|ZEC|BCH|NOKU|FDZ|GUSD|XRP|EURN)\z/ =~ pair['fund_id']
+
+            next if separator.nil?
+
+            base   = pair['fund_id'][0..separator - 1]
+            target = pair['fund_id'][separator..-1]
+
             market_pair = Cryptoexchange::Models::MarketPair.new(
                             base: base,
                             target: target,
                             market: Therocktrading::Market::NAME
                           )
-            adapt(ticker, market_pair)
-          end
+            adapt(pair, market_pair)
+          end.compact
         end
 
         def adapt(output, market_pair)
@@ -41,7 +47,7 @@ module Cryptoexchange::Exchanges
           ticker.high = NumericHelper.to_d(market['high'])
           ticker.low = NumericHelper.to_d(market['low'])
           ticker.volume = NumericHelper.to_d(market['volume_traded'])
-          ticker.timestamp = Time.now.to_i
+          ticker.timestamp = nil
           ticker.payload = market
           ticker
         end

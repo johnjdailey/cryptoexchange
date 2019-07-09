@@ -31,17 +31,9 @@ module Cryptoexchange::Exchanges
           ticker.ask       = NumericHelper.to_d(market['lowest_ask'])
           ticker.bid       = NumericHelper.to_d(market['highest_bid'])
           ticker.volume    = NumericHelper.to_d(market['24h_volume'])
-          ticker.timestamp = DateTime.now.to_time.to_i
+          ticker.timestamp = nil
           ticker.payload   = market
           ticker
-        end
-
-        private
-
-        def http_get(endpoint)
-          ctx = OpenSSL::SSL::SSLContext.new
-          ctx.verify_mode = OpenSSL::SSL::VERIFY_NONE
-          fetch_response = HTTP.timeout(:write => 2, :connect => 5, :read => 8).get(endpoint, ssl_context: ctx)
         end
       end
     end

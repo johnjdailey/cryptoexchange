@@ -26,8 +26,6 @@ RSpec.describe 'Okex integration specs' do
     expect(ticker.high).to be_a Numeric
     expect(ticker.low).to be_a Numeric
     expect(ticker.volume).to be_a Numeric
-    expect(ticker.timestamp).to be_a Numeric
-    expect(2000..Date.today.year).to include(Time.at(ticker.timestamp).year)
     expect(ticker.payload).to_not be nil
   end
 
@@ -42,8 +40,8 @@ RSpec.describe 'Okex integration specs' do
     expect(order_book.bids).to_not be_empty
     expect(order_book.asks.first.price).to_not be_nil
     expect(order_book.bids.first.amount).to_not be_nil
-    expect(order_book.bids.first.timestamp).to_not be_nil
-    expect(order_book.timestamp).to be_a Numeric
+    expect(order_book.bids.first.timestamp).to be_nil
+    expect(order_book.timestamp).to be_nil
     expect(order_book.payload).to_not be nil
   end
 
@@ -62,5 +60,11 @@ RSpec.describe 'Okex integration specs' do
     expect(trade.timestamp).to be_a Numeric
     expect(trade.payload).to_not be nil
     expect(trade.market).to eq 'okex'
+  end
+
+  it 'give trade url' do
+    pair = Cryptoexchange::Models::MarketPair.new(base: 'ETH', target: 'USDT', market: 'okex')
+    trade_page_url = client.trade_page_url 'okex', base: pair.base, target: pair.target
+    expect(trade_page_url).to eq "https://www.okex.com/market?product=eth_usdt"
   end
 end

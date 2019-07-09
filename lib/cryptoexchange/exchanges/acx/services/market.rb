@@ -24,13 +24,13 @@ module Cryptoexchange::Exchanges
           ticker.base      = market_pair.base
           ticker.target    = market_pair.target
           ticker.market    = Acx::Market::NAME
-          ticker.ask       = NumericHelper.to_d(output['ticker']['buy'])
-          ticker.bid       = NumericHelper.to_d(output['ticker']['sell'])
+          ticker.ask       = NumericHelper.to_d(output['ticker']['sell'])
+          ticker.bid       = NumericHelper.to_d(output['ticker']['buy'])
           ticker.high      = NumericHelper.to_d(output['ticker']['high'])
           ticker.low       = NumericHelper.to_d(output['ticker']['low'])
           ticker.last      = NumericHelper.to_d(output['ticker']['last'])
           ticker.volume    = NumericHelper.to_d(output['ticker']['vol'])
-          ticker.timestamp = output['at'].to_i
+          ticker.timestamp = nil
           ticker.payload   = output
           ticker
         end

@@ -13,6 +13,12 @@ RSpec.describe 'ACX integration specs' do
     expect(pair.market).to eq 'acx'
   end
 
+  it 'give trade url' do
+    eth_aud_pair = Cryptoexchange::Models::MarketPair.new(base: 'eth', target: 'aud', market: 'acx')
+    trade_page_url = client.trade_page_url 'acx', base: eth_aud_pair.base, target: eth_aud_pair.target
+    expect(trade_page_url).to eq "https://acx.io/markets/ethaud"
+  end
+
   it 'fetch ticker' do
     eth_aud_pair = Cryptoexchange::Models::MarketPair.new(base: 'eth', target: 'aud', market: 'acx')
     ticker = client.ticker(eth_aud_pair)
@@ -26,8 +32,7 @@ RSpec.describe 'ACX integration specs' do
     expect(ticker.ask).to be_a Numeric
     expect(ticker.bid).to be_a Numeric
     expect(ticker.volume).to be_a Numeric
-    expect(ticker.timestamp).to be_a Numeric
-    expect(2000..Date.today.year).to include(Time.at(ticker.timestamp).year)
+    expect(ticker.timestamp).to be nil
     expect(ticker.payload).to_not be nil
   end
 

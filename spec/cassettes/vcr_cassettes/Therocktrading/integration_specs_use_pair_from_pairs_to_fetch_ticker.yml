@@ -2,26 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.therocktrading.com/api/tickers
+    uri: https://api.therocktrading.com/v1/funds/tickers
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - www.therocktrading.com
+      - api.therocktrading.com
       User-Agent:
-      - http.rb/2.1.0
+      - http.rb/3.0.0
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - nginx
+      - nginx/1.10.3
       Date:
-      - Sat, 07 Oct 2017 02:20:44 GMT
+      - Tue, 19 Feb 2019 04:37:06 GMT
       Content-Type:
       - application/json; charset=utf-8; charset=utf-8
       Transfer-Encoding:
@@ -35,42 +35,40 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Etag:
-      - W/"7d73b7d8789510e4d291a18d25f4d572"
+      - W/"04921dfeaa81a6968da5be53e2516949"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d92ed5b4-0d24-40eb-af6c-c042d13256cc
+      - fc0e82c0-094c-478e-aa5e-84858f221d09
       X-Runtime:
-      - '0.069148'
-      Strict-Transport-Security:
-      - max-age=31536000;
+      - '0.113952'
     body:
       encoding: UTF-8
-      string: '{"result":{"errorCode":"OK","tickers":{"BTCEUR":{"bid":3669.78,"ask":3670.0,"last":3670.0,"volume":1437612.26,"volume_traded":402.295,"open":3685.59,"high":3763.5,"low":3658.79,"close":3763.5},"BTCUSD":{"bid":4366.41,"ask":4371.86,"last":4383.14,"volume":16045.74,"volume_traded":3.665,"open":4319.76,"high":4418.35,"low":4312.84,"close":4418.35},"LTCEUR":{"bid":43.76,"ask":43.78,"last":43.76,"volume":2681.43,"volume_traded":59.94,"open":44.12,"high":45.23,"low":43.4,"close":45.23},"LTCBTC":{"bid":0.01183,"ask":0.01186,"last":0.01189,"volume":0.7009104,"volume_traded":58.62,"open":0.01197,"high":0.012,"low":0.01189,"close":0.012},"BTCXRP":{"bid":18532.66,"ask":18542.83,"last":18575.15,"volume":29057.56293,"volume_traded":1.582,"open":18037.57,"high":18739.59,"low":17978.54,"close":18739.59},"EURXRP":{"bid":4.98,"ask":5.08,"last":5.04,"volume":32354.6637,"volume_traded":6631.54,"open":4.94,"high":5.01,"low":4.78,"close":5.01},"USDXRP":{"bid":4.25,"ask":4.26,"last":4.29,"volume":1431.6194,"volume_traded":343.96,"open":4.15,"high":4.29,"low":4.08,"close":4.29},"PPCEUR":{"bid":1.08,"ask":1.09,"last":1.08,"volume":927.7,"volume_traded":857.1,"open":1.12,"high":1.12,"low":1.04,"close":1.12},"PPCBTC":{"bid":0.00029,"ask":0.0003,"last":0.0003,"volume":0.19169928,"volume_traded":653.92,"open":0.00031,"high":0.00031,"low":0.00028,"close":0.00031},"ETHEUR":{"bid":265.0,"ask":266.08,"last":265.0,"volume":125426.74,"volume_traded":495.97,"open":252.23,"high":260.24,"low":251.4,"close":260.24},"ETHBTC":{"bid":0.07175,"ask":0.07211,"last":0.07203,"volume":6.01275567,"volume_traded":85.58,"open":0.0683,"high":0.07074,"low":0.06772,"close":0.07074},"ZECBTC":{"bid":0.05888,"ask":0.059,"last":0.05908,"volume":1.37261636,"volume_traded":22.84,"open":0.05942,"high":0.06313,"low":0.05671,"close":0.06313},"ZECEUR":{"bid":216.84,"ask":217.44,"last":217.5,"volume":10620.75,"volume_traded":47.88,"open":218.83,"high":232.66,"low":214.63,"close":232.66},"BCHBTC":{"bid":0.08302,"ask":0.0836,"last":0.08359,"volume":0.8967889,"volume_traded":10.717,"open":0.08387,"high":0.08568,"low":0.08146,"close":0.08568}}}}'
+      string: '{"tickers":[{"date":"2019-02-19T04:37:06.125Z","fund_id":"BTCEUR","bid":3428.69,"ask":3434.45,"last":3434.63,"open":3209.03,"close":3414.48,"low":3199.15,"high":3453.73,"volume":651089.25838,"volume_traded":192.0524},{"date":"2019-02-19T04:37:05.859Z","fund_id":"LTCEUR","bid":41.36,"ask":41.88,"last":41.2,"open":38.34,"close":41.77,"low":38.34,"high":43.0,"volume":31409.6802,"volume_traded":783.06},{"date":"2019-02-19T04:37:05.522Z","fund_id":"LTCBTC","bid":0.01205598,"ask":0.01262553,"last":0.01262714,"open":0.01214633,"close":0.01216482,"low":0.0118434,"high":0.01266186,"volume":3.30886038,"volume_traded":271.59},{"date":"2019-02-19T04:37:04.717Z","fund_id":"BTCXRP","bid":12033.75,"ask":12093.9,"last":12033.74,"open":12078.71,"close":12110.98,"low":11884.3,"high":12144.92,"volume":8254.315282,"volume_traded":0.6862},{"date":"2019-02-19T04:37:00.584Z","fund_id":"EURXRP","bid":3.49,"ask":3.52,"last":3.48,"open":3.77,"close":3.53,"low":3.46,"high":3.77,"volume":11075.8518,"volume_traded":3113.47},{"date":"2019-02-19T04:35:07.271Z","fund_id":"PPCEUR","bid":0.41,"ask":0.42,"last":0.42,"open":0.4,"close":0.41,"low":0.4,"high":0.42,"volume":168.8247,"volume_traded":405.62},{"date":"2019-02-19T04:34:34.823Z","fund_id":"PPCBTC","bid":0.00012139,"ask":0.00012199,"last":0.00012139,"open":0.00012723,"close":0.00012141,"low":0.0001214,"high":0.00012723,"volume":0.0739565,"volume_traded":598.73},{"date":"2019-02-19T04:37:06.134Z","fund_id":"ETHEUR","bid":128.65,"ask":129.3,"last":129.4,"open":118.17,"close":127.71,"low":117.48,"high":131.27,"volume":195436.0056,"volume_traded":1552.078},{"date":"2019-02-19T04:36:52.641Z","fund_id":"ETHBTC","bid":0.03754216,"ask":0.03769742,"last":0.03768125,"open":0.03651578,"close":0.03733692,"low":0.03634682,"high":0.03823874,"volume":3.68041421,"volume_traded":98.259},{"date":"2019-02-19T04:37:03.141Z","fund_id":"ZECBTC","bid":0.01398227,"ask":0.0139871,"last":0.01398219,"open":0.01406531,"close":0.0139817,"low":0.01398141,"high":0.01440624,"volume":0.77111088,"volume_traded":54.197},{"date":"2019-02-19T04:37:05.706Z","fund_id":"ZECEUR","bid":47.54,"ask":48.35,"last":47.31,"open":44.85,"close":47.34,"low":44.85,"high":48.3,"volume":6002.7135,"volume_traded":127.74},{"date":"2019-02-19T04:36:58.454Z","fund_id":"BCHBTC","bid":0.03100017,"ask":0.03809712,"last":0.03100157,"open":0.03100003,"close":0.03100018,"low":0.03100001,"high":0.03809767,"volume":0.13775784,"volume_traded":3.642},{"date":"2019-02-19T03:49:30.060Z","fund_id":"EUREURN","bid":1.5,"ask":1.9,"last":1.5,"open":1.119,"close":2.0,"low":1.119,"high":2.0,"volume":2837.64239,"volume_traded":2036.45},{"date":"2019-02-19T04:30:42.504Z","fund_id":"ETHEURN","bid":10.0,"ask":225.0,"last":189.0,"open":80.0,"close":80.0,"low":80.0,"high":80.0,"volume":94.5,"volume_traded":0.5},{"date":"2019-02-19T03:49:30.943Z","fund_id":"NOKUEURN","bid":0.07,"ask":0.15,"last":0.15,"open":0.077,"close":0.077,"low":0.077,"high":0.077,"volume":0.1021,"volume_traded":1.014},{"date":"2019-02-19T04:36:45.020Z","fund_id":"NOKUETH","bid":0.000511626,"ask":0.000530955,"last":0.000521514,"open":0.000507,"close":0.000531252,"low":0.000501358,"high":0.000757573,"volume":48.340244165,"volume_traded":92163.892},{"date":"2019-02-19T04:37:04.793Z","fund_id":"FDZETH","bid":0.000033218,"ask":0.000033365,"last":0.000033681,"open":0.000034138,"close":0.000033,"low":0.000033,"high":0.000034368,"volume":6.229243647,"volume_traded":187283.697},{"date":"2019-02-19T04:36:19.594Z","fund_id":"BCHEUR","bid":127.59,"ask":129.12,"last":127.41,"open":109.57,"close":125.28,"low":109.57,"high":127.8,"volume":354.46972,"volume_traded":2.874},{"date":"2019-02-19T04:37:05.800Z","fund_id":"BTCGUSD","bid":3835.59,"ask":3866.14,"last":3840.06,"open":3610.64,"close":3827.26,"low":3610.64,"high":3840.26,"volume":3613.97,"volume_traded":0.9584},{"date":"2019-02-19T04:36:47.916Z","fund_id":"GUSDEUR","bid":0.88,"ask":0.89,"last":0.89,"open":0.88,"close":0.88,"low":0.88,"high":0.9,"volume":54.9975,"volume_traded":61.76}]}'
     http_version: 
-  recorded_at: Sat, 07 Oct 2017 02:20:44 GMT
+  recorded_at: Tue, 19 Feb 2019 04:37:06 GMT
 - request:
     method: get
-    uri: https://www.therocktrading.com/api/tickers
+    uri: https://api.therocktrading.com/v1/funds/tickers
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - www.therocktrading.com
+      - api.therocktrading.com
       User-Agent:
-      - http.rb/2.1.0
+      - http.rb/3.0.0
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - nginx
+      - nginx/1.10.3
       Date:
-      - Sat, 07 Oct 2017 02:20:45 GMT
+      - Tue, 19 Feb 2019 04:37:08 GMT
       Content-Type:
       - application/json; charset=utf-8; charset=utf-8
       Transfer-Encoding:
@@ -84,18 +82,16 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Etag:
-      - W/"7d73b7d8789510e4d291a18d25f4d572"
+      - W/"64e1681191ffeaeb9604c8fcdcb0ca57"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aad22335-ddc0-453b-873b-18f58e648371
+      - 97c7fcf1-142a-43cd-9d17-d7a3a1cd8c7d
       X-Runtime:
-      - '0.219100'
-      Strict-Transport-Security:
-      - max-age=31536000;
+      - '0.701474'
     body:
       encoding: UTF-8
-      string: '{"result":{"errorCode":"OK","tickers":{"BTCEUR":{"bid":3669.78,"ask":3670.0,"last":3670.0,"volume":1437612.26,"volume_traded":402.295,"open":3685.59,"high":3763.5,"low":3658.79,"close":3763.5},"BTCUSD":{"bid":4366.41,"ask":4371.86,"last":4383.14,"volume":16045.74,"volume_traded":3.665,"open":4319.76,"high":4418.35,"low":4312.84,"close":4418.35},"LTCEUR":{"bid":43.76,"ask":43.78,"last":43.76,"volume":2681.43,"volume_traded":59.94,"open":44.12,"high":45.23,"low":43.4,"close":45.23},"LTCBTC":{"bid":0.01183,"ask":0.01186,"last":0.01189,"volume":0.7009104,"volume_traded":58.62,"open":0.01197,"high":0.012,"low":0.01189,"close":0.012},"BTCXRP":{"bid":18532.66,"ask":18542.83,"last":18575.15,"volume":29057.56293,"volume_traded":1.582,"open":18037.57,"high":18739.59,"low":17978.54,"close":18739.59},"EURXRP":{"bid":4.98,"ask":5.08,"last":5.04,"volume":32354.6637,"volume_traded":6631.54,"open":4.94,"high":5.01,"low":4.78,"close":5.01},"USDXRP":{"bid":4.25,"ask":4.26,"last":4.29,"volume":1431.6194,"volume_traded":343.96,"open":4.15,"high":4.29,"low":4.08,"close":4.29},"PPCEUR":{"bid":1.08,"ask":1.09,"last":1.08,"volume":927.7,"volume_traded":857.1,"open":1.12,"high":1.12,"low":1.04,"close":1.12},"PPCBTC":{"bid":0.00029,"ask":0.0003,"last":0.0003,"volume":0.19169928,"volume_traded":653.92,"open":0.00031,"high":0.00031,"low":0.00028,"close":0.00031},"ETHEUR":{"bid":265.0,"ask":266.08,"last":265.0,"volume":125426.74,"volume_traded":495.97,"open":252.23,"high":260.24,"low":251.4,"close":260.24},"ETHBTC":{"bid":0.07175,"ask":0.07211,"last":0.07203,"volume":6.01275567,"volume_traded":85.58,"open":0.0683,"high":0.07074,"low":0.06772,"close":0.07074},"ZECBTC":{"bid":0.05888,"ask":0.059,"last":0.05908,"volume":1.37261636,"volume_traded":22.84,"open":0.05942,"high":0.06313,"low":0.05671,"close":0.06313},"ZECEUR":{"bid":216.84,"ask":217.44,"last":217.5,"volume":10620.75,"volume_traded":47.88,"open":218.83,"high":232.66,"low":214.63,"close":232.66},"BCHBTC":{"bid":0.08302,"ask":0.0836,"last":0.08359,"volume":0.8967889,"volume_traded":10.717,"open":0.08387,"high":0.08568,"low":0.08146,"close":0.08568}}}}'
+      string: '{"tickers":[{"date":"2019-02-19T04:37:06.675Z","fund_id":"BTCEUR","bid":3428.69,"ask":3434.44,"last":3434.63,"open":3209.03,"close":3414.48,"low":3199.15,"high":3453.73,"volume":651089.25838,"volume_traded":192.0524},{"date":"2019-02-19T04:37:05.859Z","fund_id":"LTCEUR","bid":41.36,"ask":41.88,"last":41.2,"open":38.34,"close":41.77,"low":38.34,"high":43.0,"volume":31409.6802,"volume_traded":783.06},{"date":"2019-02-19T04:37:07.836Z","fund_id":"LTCBTC","bid":0.012056,"ask":0.01262553,"last":0.01262714,"open":0.01214633,"close":0.01216482,"low":0.0118434,"high":0.01266186,"volume":3.30886038,"volume_traded":271.59},{"date":"2019-02-19T04:37:04.717Z","fund_id":"BTCXRP","bid":12033.75,"ask":12093.9,"last":12033.74,"open":12078.71,"close":12110.98,"low":11884.3,"high":12144.92,"volume":8254.315282,"volume_traded":0.6862},{"date":"2019-02-19T04:37:00.584Z","fund_id":"EURXRP","bid":3.49,"ask":3.52,"last":3.48,"open":3.77,"close":3.53,"low":3.46,"high":3.77,"volume":11075.8518,"volume_traded":3113.47},{"date":"2019-02-19T04:35:07.271Z","fund_id":"PPCEUR","bid":0.41,"ask":0.42,"last":0.42,"open":0.4,"close":0.41,"low":0.4,"high":0.42,"volume":168.8247,"volume_traded":405.62},{"date":"2019-02-19T04:34:34.823Z","fund_id":"PPCBTC","bid":0.00012139,"ask":0.00012199,"last":0.00012139,"open":0.00012723,"close":0.00012141,"low":0.0001214,"high":0.00012723,"volume":0.0739565,"volume_traded":598.73},{"date":"2019-02-19T04:37:08.040Z","fund_id":"ETHEUR","bid":128.65,"ask":129.3,"last":129.4,"open":118.17,"close":127.71,"low":117.48,"high":131.27,"volume":195436.0056,"volume_traded":1552.078},{"date":"2019-02-19T04:36:52.641Z","fund_id":"ETHBTC","bid":0.03754216,"ask":0.03769742,"last":0.03768125,"open":0.03651578,"close":0.03733692,"low":0.03634682,"high":0.03823874,"volume":3.68041421,"volume_traded":98.259},{"date":"2019-02-19T04:37:03.141Z","fund_id":"ZECBTC","bid":0.01398227,"ask":0.0139871,"last":0.01398219,"open":0.01406531,"close":0.0139817,"low":0.01398141,"high":0.01440624,"volume":0.77111088,"volume_traded":54.197},{"date":"2019-02-19T04:37:05.706Z","fund_id":"ZECEUR","bid":47.54,"ask":48.35,"last":47.31,"open":44.85,"close":47.34,"low":44.85,"high":48.3,"volume":6002.7135,"volume_traded":127.74},{"date":"2019-02-19T04:36:58.454Z","fund_id":"BCHBTC","bid":0.03100017,"ask":0.03809712,"last":0.03100157,"open":0.03100003,"close":0.03100018,"low":0.03100001,"high":0.03809767,"volume":0.13775784,"volume_traded":3.642},{"date":"2019-02-19T03:49:30.060Z","fund_id":"EUREURN","bid":1.5,"ask":1.9,"last":1.5,"open":1.119,"close":2.0,"low":1.119,"high":2.0,"volume":2837.64239,"volume_traded":2036.45},{"date":"2019-02-19T04:30:42.504Z","fund_id":"ETHEURN","bid":10.0,"ask":225.0,"last":189.0,"open":80.0,"close":80.0,"low":80.0,"high":80.0,"volume":94.5,"volume_traded":0.5},{"date":"2019-02-19T03:49:30.943Z","fund_id":"NOKUEURN","bid":0.07,"ask":0.15,"last":0.15,"open":0.077,"close":0.077,"low":0.077,"high":0.077,"volume":0.1021,"volume_traded":1.014},{"date":"2019-02-19T04:36:45.020Z","fund_id":"NOKUETH","bid":0.000511626,"ask":0.000530955,"last":0.000521514,"open":0.000507,"close":0.000531252,"low":0.000501358,"high":0.000757573,"volume":48.340244165,"volume_traded":92163.892},{"date":"2019-02-19T04:37:04.793Z","fund_id":"FDZETH","bid":0.000033218,"ask":0.000033365,"last":0.000033681,"open":0.000034138,"close":0.000033,"low":0.000033,"high":0.000034368,"volume":6.229243647,"volume_traded":187283.697},{"date":"2019-02-19T04:36:19.594Z","fund_id":"BCHEUR","bid":127.59,"ask":129.12,"last":127.41,"open":109.57,"close":125.28,"low":109.57,"high":127.8,"volume":354.46972,"volume_traded":2.874},{"date":"2019-02-19T04:37:05.800Z","fund_id":"BTCGUSD","bid":3835.59,"ask":3866.14,"last":3840.06,"open":3610.64,"close":3827.26,"low":3610.64,"high":3840.26,"volume":3613.97,"volume_traded":0.9584},{"date":"2019-02-19T04:36:47.916Z","fund_id":"GUSDEUR","bid":0.88,"ask":0.89,"last":0.89,"open":0.88,"close":0.88,"low":0.88,"high":0.9,"volume":54.9975,"volume_traded":61.76}]}'
     http_version: 
-  recorded_at: Sat, 07 Oct 2017 02:20:45 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Tue, 19 Feb 2019 04:37:08 GMT
+recorded_with: VCR 4.0.0

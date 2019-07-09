@@ -14,7 +14,9 @@ module Cryptoexchange::Exchanges
         end
 
         def ticker_url(market_pair)
-          "#{Cryptoexchange::Exchanges::Bitso::Market::API_URL}/ticker?book=#{market_pair.base}_#{market_pair.target}"
+          base = market_pair.base.downcase
+          target = market_pair.target.downcase
+          "#{Cryptoexchange::Exchanges::Bitso::Market::API_URL}/ticker?book=#{base}_#{target}"
         end
 
         def adapt(output, market_pair)
@@ -29,7 +31,7 @@ module Cryptoexchange::Exchanges
           ticker.high = NumericHelper.to_d(market['high'])
           ticker.low = NumericHelper.to_d(market['low'])
           ticker.volume = NumericHelper.to_d(market['volume'])
-          ticker.timestamp = DateTime.parse(market['created_at']).to_time.to_i
+          ticker.timestamp = nil
           ticker.payload = market
           ticker
         end
